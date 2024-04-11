@@ -3,7 +3,7 @@ import os
 import webbrowser
 
 import streamlit as st
-
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 st.set_page_config(layout="wide")
 
 st.image('DSU_Logo.tif', width=750)

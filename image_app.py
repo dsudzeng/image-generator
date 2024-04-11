@@ -21,7 +21,7 @@ st.title('🦜🔗 Image Generator')
 prompt_input = st.text_input('Please enter a prompt in the textbox')
 
 
- def nav_to(url):
+def nav_to(url):
     nav_script = """
         <meta http-equiv="refresh" content="0; url='%s'">
     """ % (url)

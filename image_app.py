@@ -5,11 +5,8 @@ import requests
 import streamlit as st
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 st.set_page_config(layout="wide")
-
 st.image('DSU_Logo.tif', width=750)
-
 st.header('ARTIFICIAL INTELLIGENCE IN ORGANIZATIONS (BS)', divider='rainbow')
-
 new_title = '<p style="font-family:sans-serif; color:Green; font-size: 30px;">The future of business</p>'
 st.markdown(new_title, unsafe_allow_html=True)
 

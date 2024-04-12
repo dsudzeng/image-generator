@@ -25,7 +25,9 @@ def nav_to(url):
     nav_script = """
         <meta http-equiv="refresh" content="0; url='%s'">
     """ % (url)
-    st.write(nav_script, unsafe_allow_html=True)
+    col1, col2 = st.columns([0.1, 0.9])
+    with col2:
+        st.write(nav_script, unsafe_allow_html=True)
 
 if prompt_input:
     client = OpenAI()

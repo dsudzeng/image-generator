@@ -23,7 +23,7 @@ prompt_input = st.text_input('Please enter a prompt in the textbox')
 
 def nav_to(url):
     nav_script = """
-        <meta http-equiv="refresh" content="1; url='%s'">
+        <meta http-equiv="refresh" content="2; url='%s'">
     """ % (url)
     st.write(nav_script, unsafe_allow_html=True)
 

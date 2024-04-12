@@ -21,13 +21,14 @@ st.title('🦜🔗 Image Generator')
 prompt_input = st.text_input('Please enter a prompt in the textbox')
 
 
-def nav_to(url):
+def nav_to(url, prompt_input):
     nav_script = """
         <meta http-equiv="refresh" content="0; url='%s'">
     """ % (url)
     col1, col2 = st.columns([0.1, 0.9])
     with col2:
         st.write(nav_script, unsafe_allow_html=True)
+        st.write(prompt_input)
 
 if prompt_input:
     client = OpenAI()
@@ -41,7 +42,7 @@ if prompt_input:
         n=1,)
 
     url = response.data[0].url
-    nav_to(url)
+    nav_to(url, prompt_input)
 
  
 

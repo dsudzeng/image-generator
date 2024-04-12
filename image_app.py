@@ -47,11 +47,8 @@ if prompt_input:
     server_url = "http://dsu.pythonanywhere.com/receive_images"
 
 # The JSON payload you want to send
-    data = {
-        "url": url,
-        "caption": prompt_input
-        }
+    data = {"url": url, "caption": prompt_input}
 
 # Send a POST request with JSON data
-    response = requests.post(server_url, json=data)
+    requests.post(server_url, json=data)
     

@@ -33,7 +33,6 @@ def nav_to(url, prompt_input):
 if prompt_input:
     client = OpenAI()
 
-
     response = client.images.generate(
         model="dall-e-3",
         prompt=prompt_input,
@@ -44,14 +43,3 @@ if prompt_input:
     url = response.data[0].url
     nav_to(url, prompt_input)
 
- 
-
-# The URL of the Flask server endpoint that will handle the JSON data
-    server_url = "https://dsu.pythonanywhere.com/receive_images"
-
-# The JSON payload you want to send
-    data = {"url": url, "caption": prompt_input}
-
-# Send a POST request with JSON data
-    requests.post(server_url, json=data)
-    

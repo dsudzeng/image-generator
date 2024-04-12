@@ -44,7 +44,7 @@ if prompt_input:
  
 
 # The URL of the Flask server endpoint that will handle the JSON data
-    server_url = "http://dsu.pythonanywhere.com/receive-images"
+    server_url = "http://dsu.pythonanywhere.com/receive_images"
 
 # The JSON payload you want to send
     data = {

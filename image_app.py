@@ -1,7 +1,7 @@
 from openai import OpenAI
 import os
 import webbrowser
-
+import requests
 import streamlit as st
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 st.set_page_config(layout="wide")
@@ -41,4 +41,17 @@ if prompt_input:
     url = response.data[0].url
     nav_to(url)
 
+ 
+
+# The URL of the Flask server endpoint that will handle the JSON data
+    server_url = "http://dsu.pythonanywhere.com/receive-images"
+
+# The JSON payload you want to send
+    data = {
+        "url": url,
+        "caption": prompt_input
+        }
+
+# Send a POST request with JSON data
+    response = requests.post(server_url, json=data)
     

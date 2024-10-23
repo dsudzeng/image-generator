@@ -16,7 +16,7 @@ st.write('**Students will learn to understand what artificial intelligence is, a
 #st.title('🦜🔗 Paradigm Futures Image Generator')
 
 # Pre-determined password
-PASSWORD = "dsu"
+PASSWORD = "dsu1"
 
 # Instructions for the user
 st.write("Please enter the password to enable the submit button.")
